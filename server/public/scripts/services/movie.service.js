@@ -6,9 +6,15 @@ console.log('Sale service Loaded')
   self.movie = {list: [] };
   //Link view to service data
 
+  self.getMovie = function() {  
+    console.log('called get sale!');
+    $http.get('/movies').then(function (response){
+       self.movie.list = response.data;
+    })
+  }
 
   self.addMovie = function (movie) {
-    $http.post('/movie', movie).then( function (response){
+    $http.post('/movies', movie).then( function (response){
       console.log('Sale succesfully posted');
       self.getMovie();
     }).catch ( function (error){ 

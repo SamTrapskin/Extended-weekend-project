@@ -16,42 +16,23 @@
     <link href="https://fonts.googleapis.com/css?family=Eczar" rel="stylesheet">
 </head>
 <body ng-app="movieDatabaseApp">
-    <h1>myMovie Database2</h1>
+    <h1>myMovie Database</h1>
     
-    <button>Add Entry</button>
-    <button>Manage Genres</button>
-        <br />
-    <input type="text" placeholder="Movie Title">
+    <div ng-include=" '/views/templates/nav.html' ">
+        </div>
+    
+    <a href = "#!/movies">
+      
+    </a>
+    
+    <a href = "#!/genre">
+   
+    </a>
+    
 
-    <!-- dropdown to select movie genre -->
-    <select>
-        <option value="Comedy">Comedy</option>
-        <option value="Action/Adventure">Action/Adventure</option>
-        <option value="Drama">Drama</option>
-        <option value="Horror">Horror/Suspense</option>
-        <option value="Family">Family</option>
-        <option value="Television">Television</option>
-    </select>
+    <main ng-view>
 
-    <!-- <button class="addMovie" ng-click 'vm.addMovie'>Add to Collection</button> -->
-
-        <!-- movies to be placed here -->
-    <div ng-view>
-        
-        <!-- <ul ng-repeat 'movie in vm.movie.list'>
-            <li></li>
-
-
-        </ul> -->
-
-
-
-
-
-
-
-
-    </div>
+    </main>
 
 </body>
 </html>

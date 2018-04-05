@@ -1,5 +1,8 @@
 //PG CONFIG SETUP
-const pg = require('pg');                                        
+const pg = require('pg'); 
+const url = require('url');
+
+                                   
 const Pool = pg.Pool;                                           
 const config = {                                               
     database:'movie_database', 

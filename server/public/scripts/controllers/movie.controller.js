@@ -3,9 +3,8 @@ function (MovieService){
     console.log('MovieService Controller loaded');
 
     let self = this;
-    let MovieService = movieSerice;
+    let movieService = MovieService;
 
-    self.movie = MovieService.movie;
-    self.addMovie = movieService.addMovie;
+    self.Addmovie = MovieService.Addmovie;
     movieService.getMovie();
 }])  

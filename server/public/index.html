@@ -5,23 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Extended weekend project</title>
-    <script src="/vendors/angular.min.js"></script>
-    <script src="/vendors/angular-aria.min.js"></script>
-    <script src="vendors/angular-messages.min.js"></script>
+    <script src="vendors/angular.min.js"></script>
+    <script src="vendors/angular-route.js"></script>
+    <script src="vendors/angular-aria.min.js"></script>
     <script src="vendors/angular-animate.min.js"></script>
-    <script src="/vendors/angular-material.min.js"></script>
-    <script src="/scripts/client.js"></script>
-    <link rel="stylesheet" href"styles/angular-material.css">
+    <script src="vendors/angular-material.min.js"></script>
+    <script src="scripts/client.js"></script>
+
+    <link rel="stylesheet" href="styles/angular-material.min.css">
     <link href="https://fonts.googleapis.com/css?family=Eczar" rel="stylesheet">
 </head>
 <body ng-app="movieDatabaseApp">
-    <h1>myMovie Database</h1>
+    <h1>myMovie Database2</h1>
     
     <button>Add Entry</button>
     <button>Manage Genres</button>
         <br />
     <input type="text" placeholder="Movie Title">
 
+    <!-- dropdown to select movie genre -->
     <select>
         <option value="Comedy">Comedy</option>
         <option value="Action/Adventure">Action/Adventure</option>
@@ -30,6 +32,26 @@
         <option value="Family">Family</option>
         <option value="Television">Television</option>
     </select>
+
+    <!-- <button class="addMovie" ng-click 'vm.addMovie'>Add to Collection</button> -->
+
+        <!-- movies to be placed here -->
+    <div ng-view>
+        
+        <!-- <ul ng-repeat 'movie in vm.movie.list'>
+            <li></li>
+
+
+        </ul> -->
+
+
+
+
+
+
+
+
+    </div>
 
 </body>
 </html>

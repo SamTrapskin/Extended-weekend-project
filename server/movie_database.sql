@@ -1,7 +1,7 @@
 CREATE TABLE movie_name (
 "id" SERIAL PRIMARY KEY,
 "genre" varchar (60),
-"Arelease_date" varchar(80),
+"release_date" varchar(80),
 "Drama" varchar(80),
 "run_time" varchar(80)
 );

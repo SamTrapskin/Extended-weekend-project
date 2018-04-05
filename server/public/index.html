@@ -5,16 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Extended weekend project</title>
-    <link rel="stylesheet"=href="styles/angular-material.css">
     <script src="/vendors/angular.min.js"></script>
     <script src="/vendors/angular-aria.min.js"></script>
     <script src="vendors/angular-messages.min.js"></script>
     <script src="vendors/angular-animate.min.js"></script>
-    <script src="/vendors/angular-material.min.js"
+    <script src="/vendors/angular-material.min.js"></script>
     <script src="/scripts/client.js"></script>
+    <link rel="stylesheet" href"styles/angular-material.css">
     <link href="https://fonts.googleapis.com/css?family=Eczar" rel="stylesheet">
 </head>
-<body>
+<body ng-app="movieDatabaseApp">
     <h1>myMovie Database</h1>
+    
+    <button>Add Entry</button>
+    <button>Manage Genres</button>
+        <br />
+    <input type="text" placeholder="Movie Title">
+
+    <select>
+        <option value="Comedy">Comedy</option>
+        <option value="Action/Adventure">Action/Adventure</option>
+        <option value="Drama">Drama</option>
+        <option value="Horror">Horror/Suspense</option>
+        <option value="Family">Family</option>
+        <option value="Television">Television</option>
+    </select>
+
 </body>
 </html>

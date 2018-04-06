@@ -21,7 +21,6 @@ console.log('Sale service Loaded')
       console.log('error in POST', error);
     })
   };
-       self.addMovie();
 
   self.deleteMovie = function(movieId) {
     $http({

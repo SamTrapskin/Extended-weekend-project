@@ -2,15 +2,14 @@ let express = require('express');
 const router = require('express').Router();
 const pool = require('../modules/pool');
 
-// 
-router.get('/', (req,res) => {
 
-    let queryText = `SELECT 'genre' FROM "movie_name";`;
+router.get('/', (req,res) => {
+    let queryText = `SELECT * FROM "film_genre";`;
     pool.query(queryText) 
     .then( (result) => {
     res.send(result.rows);
     console.log(result.rows);
-    }).catch( (erro) => {
+    }).catch( (error) => {
     console.log('error making query', error);
     res.sendStatus(500);
     })
@@ -18,8 +17,8 @@ router.get('/', (req,res) => {
 
 router.post ('/', (req, res) => {
     let list = req.body;
-    const queryText = `INSERT INTO movie_name ("name", "genre", "release_date", "run_time") VALUES ( $1, $2, $3, $4);`
-    pool.query(queryText, [list.name, list.genre, list.release_date, list.run_time])
+    const queryText = `INSERT INTO film_genre ("genre") VALUES ($1);`
+    pool.query(queryText, [list.genre])
     .then( (response) => { console.log(response)
     res.sendStatus(201);
     }).catch( (error) => {
@@ -28,7 +27,18 @@ router.post ('/', (req, res) => {
 
 })
 
-
+router.delete('/:id', (req, res) => {
+    console.log('DELETE /genre', req.params);
+    const genreId = req.params.id;
+    pool.query('DELETE FROM "film_genre" WHERE "id" = $1;', [genreId])
+        .then((result) => {
+            res.sendStatus(200);
+        })
+        .catch((error) => {
+            console.log('error making movie delete query', error);
+            res.sendStatus(500);
+        });
+});
 
 
 module.exports = router

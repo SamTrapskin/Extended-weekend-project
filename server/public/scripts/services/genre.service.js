@@ -6,7 +6,7 @@ function($http){
   //Link view to service data
 
   self.getGenre = function() {  
-    console.log('called get sale!');
+    console.log('called get genre!');
     $http.get('/genre').then(function (response){
        self.genre.list = response.data;
     })
@@ -20,5 +20,17 @@ function($http){
       console.log('error in POST', error);
     })
   };
-       self.addGenre();
+     self.addGenre();
+       
+  self.deleteGenre = function(genreId) {
+        $http({
+          method: 'DELETE',
+          url: `/genre/${genreId}`
+            }).then((response) => {
+                self.getGenre();
+            }).catch((error) => {
+                console.log('error making get request', error);
+               
+            });
+        }
 }]);

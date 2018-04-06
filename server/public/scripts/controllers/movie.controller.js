@@ -13,5 +13,5 @@ function (MovieService){
     console.log(`movie Deleted!`, movieId);
     movieService.deleteMovie(movieId);
     }
-    movieService.getMovie();
+   movieService.getMovie();
 }])  

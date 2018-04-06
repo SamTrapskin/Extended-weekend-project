@@ -17,7 +17,7 @@ router.get('/', (req,res) => {
 
 router.post ('/', (req, res) => {
     let collection = req.body;
-    const queryText = `INSERT INTO "movie_name" (name, genre, release_date, run_time') VALUES ( $1, $2, $3, $4);`
+    const queryText = `INSERT INTO movie_name ("name", "genre", "release_date", "run_time") VALUES ( $1, $2, $3, $4);`
     pool.query(queryText, [collection.name, collection.genre, collection.release_date, collection.run_time])
     .then( (response) => { console.log(response)
     res.sendStatus(201);

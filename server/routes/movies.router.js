@@ -9,7 +9,7 @@ router.get('/', (req,res) => {
     .then( (result) => {
     res.send(result.rows);
     console.log(result.rows);
-    }).catch( (erro) => {
+    }).catch( (error) => {
     console.log('error making query', error);
     res.sendStatus(500);
     })
@@ -17,11 +17,11 @@ router.get('/', (req,res) => {
 
 router.post ('/', (req, res) => {
     let collection = req.body;
-    const queryText = `INSERT INTO movie_name (name, genre, release_date, run_time') VALUES ( $1, $2, $3, $4);`
+    const queryText = `INSERT INTO "movie_name" (name, genre, release_date, run_time') VALUES ( $1, $2, $3, $4);`
     pool.query(queryText, [collection.name, collection.genre, collection.release_date, collection.run_time])
     .then( (response) => { console.log(response)
     res.sendStatus(201);
-    }).catch( (err0r) => {
+    }).catch( (error) => {
         console.log('Error', error);
     })
 

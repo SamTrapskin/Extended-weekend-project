@@ -2,8 +2,9 @@ let express = require('express');
 const router = require('express').Router();
 const pool = require('../modules/pool');
 
-
+// 
 router.get('/', (req,res) => {
+
     let queryText = `SELECT * FROM "movie_name";`;
     pool.query(queryText) 
     .then( (result) => {
@@ -16,9 +17,9 @@ router.get('/', (req,res) => {
 });
 
 router.post ('/', (req, res) => {
-    let collection = req.body;
+    let list = req.body;
     const queryText = `INSERT INTO movie_name (name, genre, release_date, run_time') VALUES ( $1, $2, $3, $4);`
-    pool.query(queryText, [collection.name, collection.genre, collection.release_date, collection.run_time])
+    pool.query(queryText, [list.name, list.genre, list.release_date, list.run_time])
     .then( (response) => { console.log(response)
     res.sendStatus(201);
     }).catch( (err0r) => {

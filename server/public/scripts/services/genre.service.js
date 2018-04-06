@@ -1,6 +1,5 @@
 movieDatabaseApp.service('GenreService', ['$http',
 function($http){
-console.log('Sale service Loaded')
   let self = this;
 
   self.genre = {list: [] };
@@ -13,7 +12,7 @@ console.log('Sale service Loaded')
     })
   }
 
-  self.addMovie = function (genre) {
+  self.addGenre = function (genre) {
     $http.post('/genre', genre).then( function (response){
       console.log('Genre succesfully posted');
       self.getGenre();

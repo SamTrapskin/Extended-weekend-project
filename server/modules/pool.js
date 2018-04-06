@@ -7,7 +7,7 @@ const Pool = pg.Pool;
 const config = {                                               
     database:'movie_database', 
     host:'localhost',                                        
-    port:5025,                 
+    port: 5432,                 
     max: 10,            
     idleTimeoutMillis:30000                               
 }   

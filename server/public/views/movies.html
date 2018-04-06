@@ -1,9 +1,13 @@
-  <section>
+ <div container>
+ 
+ <section>
   
   <!-- dropdown to select movie genre -->
 
     <h1>Add Movie</h1>
-    <input type="text" placeholder="Movie Title">
+    <input ng-model="vm.movie.name" type="text" placeholder="Movie Title">
+    <input ng-model="vm.movie.release_date" type="number" placeholder="Release Date">
+  
     
 
   <select>
@@ -15,13 +19,22 @@
     <option value="Television">Television</option>
 </select>
 
-<!-- <button class="addMovie" ng-click 'vm.addMovie'>Add to Collection</button> -->
+<button class="addMovie" ng-click 'vm.addMovie'>Add to Collection</button>
 
     <!-- movies to be placed here -->
 
+    <ul>
+        <tr></tr>
 
-        <br />
 
 
 
+
+
+
+    </ul>
+
+
+
+</div>
 </section>

@@ -11,15 +11,20 @@
     <script src="vendors/angular-animate.min.js"></script>
     <script src="vendors/angular-material.min.js"></script>
     <script src="scripts/client.js"></script>
-
+    <script src="/scripts/services/genre.service.js"></script>
+    <script src="/scripts/services/movie.service.js"></script>
+     <script src="scripts/controllers/genre.controller.js"></script>
+    <script src="scripts/controllers/movie.controller.js"></script>
     <link rel="stylesheet" href="styles/angular-material.min.css">
     <link href="https://fonts.googleapis.com/css?family=Eczar" rel="stylesheet">
 </head>
 <body ng-app="movieDatabaseApp">
+
+      
     <h1>myMovie Database</h1>
     
     <div ng-include=" '/views/templates/nav.html' ">
-        </div>
+    </div>
     
     <a href = "#!/movies">
       
@@ -28,11 +33,13 @@
     <a href = "#!/genre">
    
     </a>
-    
-
     <main ng-view>
 
+
     </main>
+    
+
+    
 
 </body>
 </html>

@@ -1,10 +1,11 @@
-movieDatabaseApp.controller('MovieDatabaseController', ['MovieService',
+movieDatabaseApp.controller('MovieController', ['MovieService',
 function (MovieService){
-    console.log('MovieService Controller loaded');
+    console.log('Movie Controller loaded');
 
     let self = this;
     let movieService = MovieService;
 
-    self.Addmovie = MovieService.Addmovie;
+    self.movie = MovieService.movie;
+    self.addMovie = movieService.addMovie;
     movieService.getMovie();
 }])  

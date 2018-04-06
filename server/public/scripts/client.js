@@ -7,7 +7,7 @@ movieDatabaseApp.config( function ($routeProvider){
     $routeProvider
     .when('/movies', {
         templateUrl: '/views/movies.html',
-        controller: 'MovieDatabaseController as vm'
+        controller: 'MovieController as vm'
     })
     .when('/genre', {
         templateUrl: '/views/genre.html',

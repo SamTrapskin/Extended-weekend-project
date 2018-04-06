@@ -19,16 +19,10 @@
   "homepage": "https://github.com/SamTrapskin/Extended-weekend-project#readme",
   "dependencies": {
     "angular": "^1.6.9",
-    "angular-animate": "^1.6.9",
-    "angular-material": "^1.1.8",
-    "angular-route": "^1.6.9",
-    "aria": "^0.2.1",
     "body": "^5.1.0",
     "body-parser": "^1.18.2",
     "express": "^4.16.3",
-    "messages": "0.0.0",
-    "parser": "^0.1.4",
-    "pg": "^7.4.1"
+    "parser": "^0.1.4"
   },
   "devDependencies": {}
 }

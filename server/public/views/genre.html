@@ -2,8 +2,17 @@
 
 <table>
     <thead>
-        <tr><td>Genre</td><td>Total Movies</td><td>Actions</td></tr>
+        <tr>
+            <th>Genre</th><th>Total Movies</th><th>Actions</th>
+        </tr>
     </thead>
+        <tbody>
+            <tr ng-repeat="movie in vm.movie.collection">
+            <td>{{movie.genre}}</td><td></td><td></td>
+        </tr>
+
+
+        </tbody>
 
 
 

@@ -22,4 +22,23 @@ console.log('Sale service Loaded')
     })
   };
        self.addMovie();
+
+  self.deleteMovie = function(movieId) {
+    $http({
+          method: 'DELETE',
+          url: `/movie/${movieId}`
+        }).then((response) => {
+            self.getMovie();
+        }).catch((error) => {
+            console.log('error making get request', error);
+           
+        });
+    }
+ 
+   
+
+
+
+
+
 }]);

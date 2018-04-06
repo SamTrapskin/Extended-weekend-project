@@ -7,5 +7,11 @@ function (MovieService){
 
     self.movie = MovieService.movie;
     self.addMovie = movieService.addMovie;
+    
+
+    self.deleteMovie = function (movieId){
+    console.log(`movie Deleted!`);
+    MovieService.deleteMovie(movieId);
+    }
     movieService.getMovie();
 }])  

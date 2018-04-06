@@ -10,8 +10,8 @@ function (MovieService){
     
 
     self.deleteMovie = function (movieId){
-    console.log(`movie Deleted!`);
-    MovieService.deleteMovie(movieId);
+    console.log(`movie Deleted!`, movieId);
+    movieService.deleteMovie(movieId);
     }
     movieService.getMovie();
 }])  

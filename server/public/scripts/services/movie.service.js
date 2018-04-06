@@ -26,7 +26,7 @@ console.log('Sale service Loaded')
   self.deleteMovie = function(movieId) {
     $http({
           method: 'DELETE',
-          url: `/movie/${movieId}`
+          url: `/movies/${movieId}`
         }).then((response) => {
             self.getMovie();
         }).catch((error) => {

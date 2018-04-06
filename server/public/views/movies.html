@@ -6,12 +6,12 @@
 
     <h1>Add Movie</h1>
     <input ng-model="vm.movie.name" type="text" placeholder="Movie Title">
-    <input ng-model="vm.movie.release_date" type="number" placeholder="Release Date">
+    <input ng-model="vm.movie.release_date" type="text" placeholder="Genre">
   
     
 
   <select>
-    <option value="Comedy">Comedy</option>
+    <option ng-model="vm.movie.genre" value="Comedy">Comedy</option>
     <option value="Action/Adventure">Action/Adventure</option>
     <option value="Drama">Drama</option>
     <option value="Horror">Horror/Suspense</option>
@@ -19,22 +19,22 @@
     <option value="Television">Television</option>
 </select>
 
-<button class="addMovie" ng-click 'vm.addMovie'>Add to Collection</button>
+<button class="addMovie" ng-click="vm.addMovie(vm.movie)">Add to Collection</button>
 
     <!-- movies to be placed here -->
+    <table>
+        <thead>
+            <tr><th>Name</th><th>Genre</th><th>Run Time mins.</th></tr>
+           
+        </thead>
+        <tbody>
+            <tr ng-repeat="movie in vm.movie.collection">
+                <td>{{movie.name}}</td><td>{{movie.genre}}</td><td>{{movie.run_time}}</td></tr>
+        </tbody>
+    </table>
+    </div>
+</section
+    
 
-    <ul>
-        <tr></tr>
 
-
-
-
-
-
-
-    </ul>
-
-
-
-</div>
 </section>

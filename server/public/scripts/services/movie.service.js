@@ -9,7 +9,7 @@ console.log('Sale service Loaded')
   self.getMovie = function() {  
     console.log('called get sale!');
     $http.get('/movies').then(function (response){
-       self.movie.list = response.data;
+       self.movie.collection = response.data;
     })
   }
 

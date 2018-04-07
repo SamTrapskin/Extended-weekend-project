@@ -1,6 +1,7 @@
 movieDatabaseApp.controller('GenreController', ['GenreService',
 function (GenreService){
     console.log('GenreService Controller loaded');
+  
 
     let self = this;
     let genreService = GenreService;
@@ -13,4 +14,4 @@ function (GenreService){
         genreService.deleteGenre(genreId);
         }
        genreService.getGenre();
-    }])  
+}])  

@@ -15,3 +15,4 @@ movieDatabaseApp.config( function ($routeProvider){
   
     })
 })
+

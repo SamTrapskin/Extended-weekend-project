@@ -1,5 +1,5 @@
-movieDatabaseApp.service('MovieService', ['$http',
-function($http){
+movieDatabaseApp.service('MovieService', ['$http', 
+function($http, ){
 console.log('Sale service Loaded')
   let self = this;
 

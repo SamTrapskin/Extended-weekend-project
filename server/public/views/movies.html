@@ -1,45 +1,44 @@
  <div container>
  
- <section>
-  
-  <!-- dropdown to select movie genre -->
+        <section>
+         
+         <!-- dropdown to select movie genre -->
+       
+           <h1>Add Movie</h1>
+           <input ng-model="vm.movie.name" type="text" placeholder="Movie Title">
+           <!-- <input ng-model="vm.movie.release_date" type="text" placeholder="Genre"> -->
+         
+           <br />
+           <input ng-model ="vm.movie.release_date" type="number" placeholder="Released">
+           <input ng-model = "vm.movie.run_time" type="number" placeholder= Runtime (mins)>
+           <!-- // -->
 
-    <h1>Add Movie</h1>
-    <input ng-model="vm.movie.name" type="text" placeholder="Movie Title">
-    <!-- <input ng-model="vm.movie.release_date" type="text" placeholder="Genre"> -->
-  
-    <br />
-    <input ng-model ="vm.movie.release_date" type="number" placeholder="Released">
-    <input ng-model = "vm.movie.run_time" type="number" placeholder= Runtime (mins)>
-  <select>
-    <option ng-model= "vm.movie.genre" value="Comedy">Comedy</option>
-    <option ng-model= "vm.movie.genre" value ="Action/Adventure">Action/Adventure</option>
-    <option ng-model= "vm.movie.genre" value="Drama">Drama</option>
-    <option ng-model= "vm.movie.genre" value="Horror">Horror/Suspense</option>
-    <option ng-model= "vm.movie.genre" value="Family">Family</option>
-    <option ng-model= "vm.movie.genre" value="Television">Television</option>
-</select>
-
-<button class="addMovie" ng-click="vm.addMovie(vm.movie)">Add to Collection</button>
-
-    <!-- movies to be placed here -->
-    <table>
-        <thead>
-            <tr><th>Name</th><th>Genre</th><th>Release date</th><th>Run Time (mins).</th></tr>
            
-        </thead>
-        <tbody>
-            <tr ng-repeat="movie in vm.movie.collection">
-                <td>{{movie.name}}</td>
-                <td>{{movie.genre}}</td>
-                <td>{{movie.release_date}}</td>
-                <td>{{movie.run_time}}</td>
-                <td><button ng-click= "vm.deleteMovie(movie.id)">Delete</button></td>
-            </tr>
-        </tbody>
-    </table>
-    </div>
-</section
-    
 
 
+
+
+       <!-- //// -->
+       <button class="addMovie" ng-click="vm.addMovie(vm.movie)">Add to Collection</button>
+       
+           <!-- movies to be placed here -->
+           <table>
+               <thead>
+                   <tr><th>Name</th><th>Genre</th><th>Release date</th><th>Run Time (mins).</th></tr>
+                  
+               </thead>
+               <tbody>
+                   <tr ng-repeat="movie in vm.movie.collection">
+                       <td>{{movie.name}}</td>
+                       <td>{{movie.genre}}</td>
+                       <td>{{movie.release_date}}</td>
+                       <td>{{movie.run_time}}</td>
+                       <td><button ng-click= "vm.deleteMovie(movie.id)">Delete</button></td>
+                   </tr>
+               </tbody>
+           </table>
+           </div>
+       </section
+           
+       
+       

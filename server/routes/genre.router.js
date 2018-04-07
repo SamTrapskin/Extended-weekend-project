@@ -4,7 +4,7 @@ const pool = require('../modules/pool');
 
 
 router.get('/', (req,res) => {
-    let queryText = `SELECT * FROM "film_genre";`;
+    let queryText = `SELECT * FROM "film_genres";`;
     pool.query(queryText) 
     .then( (result) => {
     res.send(result.rows);
@@ -17,7 +17,7 @@ router.get('/', (req,res) => {
 
 router.post ('/', (req, res) => {
     let list = req.body;
-    const queryText = `INSERT INTO film_genre ("genre") VALUES ($1);`
+    const queryText = `INSERT INTO film_genres ("genre") VALUES ($1);`
     pool.query(queryText, [list.genre])
     .then( (response) => { console.log(response)
     res.sendStatus(201);
@@ -30,7 +30,7 @@ router.post ('/', (req, res) => {
 router.delete('/:id', (req, res) => {
     console.log('DELETE /genre', req.params);
     const genreId = req.params.id;
-    pool.query('DELETE FROM "film_genre" WHERE "id" = $1;', [genreId])
+    pool.query('DELETE FROM "film_genres" WHERE "id" = $1;', [genreId])
         .then((result) => {
             res.sendStatus(200);
         })

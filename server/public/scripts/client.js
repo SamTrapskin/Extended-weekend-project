@@ -14,5 +14,6 @@ movieDatabaseApp.config( function ($routeProvider){
         controller: 'GenreController as vm'
   
     })
+
 })
 

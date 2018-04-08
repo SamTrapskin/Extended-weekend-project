@@ -1,4 +1,4 @@
- <div container>
+ <div>
  
         <section>
          
@@ -19,10 +19,41 @@
 
 
        <!-- //// -->
+
        <button class="addMovie" ng-click="vm.addMovie(vm.movie)">Add to Collection</button>
+       <div ng-repeat="movie in vm.movie.collection">
+
+                    <md-content class="md-padding" layout-xs="column" layout="row">
+                      <div flex-xs="" flex-gt-xs="50" layout="column">
+                            <md-card class="carddemoBasicUsage">
+
+                          <md-card-title>
+                            <md-card-title-text class="cardText">
+                              <h2>{{movie.name}}</h2>
+                              <h6>{{movie.genre}}</h6>
+                            </md-card-title-text>
+                            <md-card-title-media class="cardPic">
+                              <div class="md-media-lg card-media"></div>
+                            </md-card-title-media>
+                          </md-card-title>
+                          <md-card-actions layout="row" layout-align="end center">
+                            <md-button>Action 1</md-button>
+                        
+                        <md-button class="md-warn" ng-click= "vm.deleteMovie(movie.id)">Delete</md-button>
+                          </md-card-actions>
+                        </md-card>
+
+
+
+
+<!-- 
+
+
+
+
        
            <!-- movies to be placed here -->
-           <table>
+           <!-- <table>
                <thead>
                    <tr><th>Name</th><th>Genre</th><th>Release date</th><th>Run Time (mins).</th></tr>
                   
@@ -33,12 +64,10 @@
                        <td>{{movie.genre}}</td>
                        <td>{{movie.release_date}}</td>
                        <td>{{movie.run_time}}</td>
-                       <td><button ng-click= "vm.deleteMovie(movie.id)">Delete</button></td>
+                       <td>
                    </tr>
                </tbody>
            </table>
            </div>
        </section
-           
-       
-       
+    -->

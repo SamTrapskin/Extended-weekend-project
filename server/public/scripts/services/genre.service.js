@@ -20,7 +20,7 @@ function($http){
       console.log('error in POST', error);
     })
   };
-     self.addGenre();
+     //self.addGenre();
        
   self.deleteGenre = function(genreId) {
         $http({

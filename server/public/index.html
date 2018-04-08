@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Extended weekend project</title>
+    <link rel="stylesheet" href="styles/angular-material.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+
     <script src="vendors/angular.min.js"></script>
     <script src="vendors/angular-route.js"></script>
     <script src="vendors/angular-aria.min.js"></script>
@@ -15,24 +18,22 @@
     <script src="/scripts/services/movie.service.js"></script>
      <script src="scripts/controllers/genre.controller.js"></script>
     <script src="scripts/controllers/movie.controller.js"></script>
-    <link rel="stylesheet" href="styles/angular-material.min.css">
     <link href="https://fonts.googleapis.com/css?family=Eczar" rel="stylesheet">
 </head>
-<body ng-app="movieDatabaseApp">
+<body ng-app="movieDatabaseApp" ng-cloak>
+        <md-content class="md-padding">
+                <md-nav-bar
+                  md-no-ink-bar="disableInkBar"
+                  md-selected-nav-item="currentNavItem"
+                  nav-bar-aria-label="navigation links">
+                  <md-nav-item md-nav-href="#!/movies" name="Add Movie">
+                    Add Movies
+                  </md-nav-item>
+                  <md-nav-item md-nav-href="#!/genre" name="genre">
+                    Genres
+                  </md-nav-item>
+                </md-nav-bar>
 
-      
-    <h1>myMovie Database</h1>
-    
-    <div ng-include=" '/views/templates/nav.html' ">
-    </div>
-    
-    <a href = "#!/movies">
-      
-    </a>
-    
-    <a href = "#!/genre">
-   
-    </a>
     <main ng-view>
 
 

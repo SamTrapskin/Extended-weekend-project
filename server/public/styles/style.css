@@ -1,0 +1,20 @@
+.carddemoBasicUsage {
+    background-color: #2c3837; 
+}
+.cardPic{
+    background-color: #9b9292;
+}
+
+.cardText{
+    color:whitesmoke;
+}
+
+.md-subhead {
+    color: whitesmoke;
+}
+
+.cardButton {
+    color: whitesmoke;
+    background-color: white;
+
+}

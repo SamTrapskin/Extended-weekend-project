@@ -32,5 +32,8 @@ function($http){
                 console.log('error making get request', error);
                
             });
+            $scope.clearSearch = function() {
+              $scope.searchAll = null;
+          }
         }
 }]);

@@ -1,50 +1,76 @@
- <div>
- 
-        <section>
-         
+<div layout="row" layout-xs="column">
+    <section>
+        <h1>Movie Database</h1>
+
+            <div id="movieNav">
+                <md-button href ="#!/genre">Genre</md-button> <md-button>Favorites</md-button>
+    
+            </div>
+            <br />
+            <br />
+            <select id="sort">
+                <option value="" disabled selected>Sort by</option>
+                <option value="Alphabetical">A - Z</option>
+                <option value="Newest first">Most recent</option>
+            </select>
          <!-- dropdown to select movie genre -->
        
-           <h1>Add Movie</h1>
+           <div inputs>
            <input ng-model="vm.movie.name" type="text" placeholder="Movie Title">
-           <!-- <input ng-model="vm.movie.release_date" type="text" placeholder="Genre"> -->
+           <select>
+               <option value="Comedy">Comedy</option>
+               <option value="Drama">Drama</option>
+               <option value="Action/Adventure">Action/Adventure</option>
+               <option value="Science Fiction">Science fiction</option>
+               <option value="Military">Military</option>
+               <option value="Family">Family</option>
+               <option value="Television">Television</option>
+               <option value="Other">Other</option>
+
+            </select> 
          
-           <br />
            <input ng-model ="vm.movie.release_date" type="number" placeholder="Released">
            <input ng-model = "vm.movie.run_time" type="number" placeholder= Runtime (mins)>
-           <!-- // -->
+           <md-button class="md-raised md-primary"ng-click="vm.addMovie(vm.movie)">Add Movie</md-button>
+           </div>
 
            
-
-
-
-
-       <!-- //// -->
-
-       <button class="addMovie" ng-click="vm.addMovie(vm.movie)">Add to Collection</button>
-       <div ng-repeat="movie in vm.movie.collection">
-
-                    <md-content class="md-padding" layout-xs="column" layout="row">
-                      <div flex-xs="" flex-gt-xs="50" layout="column">
-                            <md-card class="carddemoBasicUsage">
-
-                          <md-card-title>
-                            <md-card-title-text class="cardText">
-                              <h2>{{movie.name}}</h2>
-                              <h6>{{movie.genre}}</h6>
-                            </md-card-title-text>
-                            <md-card-title-media class="cardPic">
-                              <div class="md-media-lg card-media"></div>
-                            </md-card-title-media>
-                          </md-card-title>
-                          <md-card-actions layout="row" layout-align="end center">
-                            <md-button>Action 1</md-button>
-                        
+           <!-- // -->
+            <div class="cards">
+           <div ng-repeat="movie in vm.movie.collection" flex-xs="" flex-gt-xs="40" layout="column">
+                <md-card>
+                  <md-card-title>
+                    <md-card-title-text>
+                      <h1>{{movie.name}}</h1>
+                      <h4>Genre: {{movie.genre}}</h4>
+                      <h6>Runtime {{movie.run_time}} mins</h6>
+                    </md-card-title-text>
+                    <md-card-title-media>
+                      <div class="md-media-sm card-media"></div>
+                    </md-card-title-media>
+                  </md-card-title>
+                  <md-card-actions layout="row" layout-align="end center">
+                        <md-button class="md-raised md-primary">Add to Faves</md-button>
                         <md-button class="md-warn" ng-click= "vm.deleteMovie(movie.id)">Delete</md-button>
-                          </md-card-actions>
-                        </md-card>
+
+                  </md-card-actions>
+                </md-card>
+            </div>
+
+        </section>
 
 
 
+
+
+
+
+
+
+
+
+
+</section>
 
 <!-- 
 

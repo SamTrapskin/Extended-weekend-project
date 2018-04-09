@@ -19,8 +19,8 @@ pool.on('connect', (client) => {
 });
 
 pool.on('error', (err, client)=> {  
-console.log("unexpected error on postgresql")
-process.exit(-1);
+    console.log("unexpected error on postgresql")
+    process.exit(-1);
 });
 
 module.exports = pool;     

@@ -1,3 +1,5 @@
+// NOT WORKING AT THE MOMENT//
+
 movieDatabaseApp.service('ApiService', ['$http',
 function($http){
    console.log('api service is loaded');

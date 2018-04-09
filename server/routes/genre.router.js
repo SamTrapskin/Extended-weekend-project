@@ -6,12 +6,12 @@ const pool = require('../modules/pool');
 router.get('/', (req,res) => {
     let queryText = `SELECT * FROM "film_genres";`;
     pool.query(queryText) 
-    .then( (result) => {
-    res.send(result.rows);
-    console.log(result.rows);
+     .then( (result) => {
+        res.send(result.rows);
+        console.log(result.rows);
     }).catch( (error) => {
-    console.log('error making query', error);
-    res.sendStatus(500);
+        console.log('error making query', error);
+        res.sendStatus(500);
     })
 });
 
@@ -19,8 +19,8 @@ router.post ('/', (req, res) => {
     let list = req.body;
     const queryText = `INSERT INTO film_genres ("genre") VALUES ($1);`
     pool.query(queryText, [list.genre])
-    .then( (response) => { console.log(response)
-    res.sendStatus(201);
+      .then( (response) => { console.log(response)
+         res.sendStatus(201);
     }).catch( (error) => {
         console.log('Error', error);
     })

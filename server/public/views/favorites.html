@@ -1,0 +1,26 @@
+<div layout="row" layout-xs="column">
+        <section class="bknd">
+        
+            <h1 id ="genreHeading">MOVIE DATABASE</h1>
+        
+            <div id="genreNav">
+            <md-button href ="#!/movies">Add Movies</md-button> <md-button href ="#!/genre">Genre</md-button>
+            </div>
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Genre</th><th>Total Movies</th><th>Actions</th>
+        </tr>
+    </thead>
+        <tbody>
+            <tr ng-repeat="genre in vm.genre.list">
+            <td>{{genre.genre}}</td>
+            <td></td>
+            <td><md-button class="md-raised md-warn" ng-click= "vm.deleteGenre(genre.id)">Remove Genre</md-button></td>
+            
+        </tr>
+
+
+        </tbody>

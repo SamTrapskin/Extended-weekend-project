@@ -13,7 +13,7 @@ app.use(express.static( 'server/public' ) );
 app.use(bodyParser.urlencoded( { extended: true } ) );
 
 app.use('/movies', movieRouter);  //engaged when request is made from MOVIE view.//goes to app.get
-app.use('/genre', genreRouter);   //engaged whe a request is made from SALE view
+app.use('/genre', genreRouter);   //engaged whe a request is made from GENRE view
 
 
 app.listen(PORT, ( ) => {

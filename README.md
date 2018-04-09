@@ -46,6 +46,10 @@ Ability to favorite a movie and display favorites on a separate route
 
 GOOGLE FONTS
 Alfa+Slab+One
+
 Bungee+Inline
+
 Bungee+Shade
+
 Fredoka+One
+

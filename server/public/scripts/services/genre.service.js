@@ -20,7 +20,6 @@ function($http){
       console.log('error in POST', error);
     })
   };
-     //self.addGenre();
        
   self.deleteGenre = function(genreId) {
         $http({
@@ -32,8 +31,5 @@ function($http){
                 console.log('error making get request', error);
                
             });
-            $scope.clearSearch = function() {
-              $scope.searchAll = null;
-          }
-        }
+    }      
 }]);

@@ -7,7 +7,7 @@ console.log('Sale service Loaded')
   //Link view to service data
 
   self.getMovie = function() {  
-    console.log('called get sale!');
+    console.log('called get movie');
     $http.get('/movies').then(function (response){
        self.movie.collection = response.data;
     })
@@ -15,7 +15,7 @@ console.log('Sale service Loaded')
 
   self.addMovie = function (movie) {
     $http.post('/movies', movie).then( function (response){
-      console.log('Sale succesfully posted');
+      console.log('Movie succesfully posted');
       self.getMovie();
     }).catch ( function (error){ 
       console.log('error in POST', error);

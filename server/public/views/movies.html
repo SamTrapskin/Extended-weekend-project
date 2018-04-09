@@ -2,18 +2,30 @@
     <section>
         <h1>MOVIE DATABASE</h1>
 
+            <!-- NAVIAGATION BUTTONS -->
+
             <div id="movieNav">
                 <md-button href ="#!/genre">Genre</md-button> <md-button>Favorites</md-button>
     
             </div>
             <br />
             <br />
+
+            <!-- END NAVIAGATION BUTTONS -->
+
+
+
+            <!-- SORT DROP-DOWN -->
+
             <select id="sort">
                 <option value="" disabled selected>Sort by</option>
                 <option value="Alphabetical">A - Z</option>
                 <option value="Genre">Genre</option>
                 <option value="Newest first">Recently added</option>
             </select>
+
+            <!-- END SORT DROP-DOWN -->
+
          <!-- dropdown to select movie genre -->
        
         <div class="inputs">
@@ -28,14 +40,19 @@
                <option value="Television">Television</option>
                <option value="Other">Other</option>
           </select> 
-         
+        <!-- END dropdown to select movie genre -->
+
+        <!-- MOVIE SEARCH INPUT FIELDS -->
+
            <input ng-model ="vm.movie.release_date" type="number" placeholder="Released">
            <input ng-model = "vm.movie.run_time" type="number" placeholder= Runtime (mins)>
-           <md-button class="md-raised md-primary"ng-click="vm.addMovie(vm.movie)">Add Movie</md-button>
+           <md-button class="md-raised md-primary"ng-click="vm.addMovie(vm.movie)","vm.searchMovie()">Add Movie</md-button>
         </div>
+        
+        <!-- END MOVIE SEARCH INPUT FIELDS -->
 
-           
-           <!-- // -->
+        <!-- MOVE RESULT CARD DISPLAYS -->
+
             <div class="cards">
            <div ng-repeat="movie in vm.movie.collection" flex-xs="" flex-gt-xs="40" layout="column">
                 <md-card>
@@ -48,6 +65,7 @@
                     </md-card-title-text>
                     <md-card-title-media>
                       <div class="md-media-sm card-media">
+                            {{vm.movieUrl.key}}
                       </div>
                     </md-card-title-media>
                   </md-card-title>
@@ -59,43 +77,10 @@
                 </md-card>
             </div>
 
+        <!-- MOVE RESULT CARD DISPLAYS -->
+
         </section>
+               
 
 
 
-
-
-
-
-
-
-
-
-
-</section>
-
-<!-- 
-
-
-
-
-       
-           <!-- movies to be placed here -->
-           <!-- <table>
-               <thead>
-                   <tr><th>Name</th><th>Genre</th><th>Release date</th><th>Run Time (mins).</th></tr>
-                  
-               </thead>
-               <tbody>
-                   <tr ng-repeat="movie in vm.movie.collection">
-                       <td>{{movie.name}}</td>
-                       <td>{{movie.genre}}</td>
-                       <td>{{movie.release_date}}</td>
-                       <td>{{movie.run_time}}</td>
-                       <td>
-                   </tr>
-               </tbody>
-           </table>
-           </div>
-       </section
-    -->

@@ -1,6 +1,12 @@
+<div layout="row" layout-xs="column">
 <section class="bknd">
 
-    <h1>Add Genre</h1>
+    <h1 id ="genreHeading">MOVIE DATABASE</h1>
+
+    <div id="genreNav">
+    <md-button href ="#!/movies">Add Movies</md-button> <md-button>Favorites</md-button>
+    </div>
+
     <div id="genreInput">
     <input id="genreType" ng-model ="vm.genre.genre" type ="text" placeholder="Add a Genre">
     <md-button class="md-raised md-primary" ng-click="vm.addGenre(vm.genre)", "searchAll = null">Add Genre</md-button>

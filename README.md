@@ -3,13 +3,7 @@ NOTE: Do not fork this repository. Instead, create your own repository from scra
 
 Trello Board: https://trello.com/b/W1vv7aFe/movie-collection-weekend-project
 
-Features
-Add genres
-Add movies by name, absolute image URL, release date, genere and run time
-Remove genres if no movies are assigned to them
-Remove movies
-Delete existing entries
-Show total number of movies next to each genre
+
 Wireframes
 Add Entry Page
 
@@ -30,3 +24,7 @@ The following variations are available for this project. Instead of movies, you 
 
 Movies -> Books and Genre -> Author
 Movies -> Songs and Genre -> Artist
+
+
+font-family: 'Alfa Slab One', cursive;
+font-family: 'Bungee Inline', cursive;

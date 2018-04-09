@@ -15,22 +15,27 @@ body {
    margin-bottom: 8px;
    position: absolute;
    top: 20px;
+   font-family: 'Fredoka One', cursive;
    
 }
-inputs {
+.inputs {
     margin-bottom: 8px;
     float: left;
+    font-family: 'Fredoka One', cursive;
 }
 
 #sort{
     position: absolute;
     left:700px;
     top:170px;
+    font-family: 'Fredoka One', cursive;
 }
 
 h1{
     text-align: center;
     color: whitesmoke;
+    font-family: 'Fredoka One', cursive;    
+    font-size: 30px;
 }
 
 .cards  {
@@ -69,20 +74,44 @@ md-icon-button md-accent{
 md-card-actions{
     background: none;
 }
+
+
        /* ----Genre view---- */
+
+
+#genreHeading{
+    margin-left: 370px;
+    text-align: center;
+}
+
+
+ #genreNav{
+    float: left; 
+    color: whitesmoke;
+    margin-bottom: 8px;
+    position: absolute;
+    top: 20px;
+    font-family: 'Fredoka One', cursive;
+
+}
+      
+       
+
 
 #genreType{
     height:28px;
     margin-top: 11px;
+    font-family: 'Fredoka One', cursive;
 }
 #genreInput{
     margin-top: 49px;
     margin-left: 520px;
+    font-family: 'Fredoka One', cursive;
   
 }
 
 table{
-    margin-left: 437px;
+    margin-left: 430px;
     color: #fc7358
 }
 tbody{
@@ -90,9 +119,14 @@ tbody{
     border: 1px solid;
     background-color: black;
 }
+th{
+    font-family: 'Fredoka One', cursive;
+
+}
 td {
     color: whitesmoke;
     border: solid 3px #fc7358;
     padding-left: 20px;
     padding-right: 20px;
+    font-family: 'Fredoka One', cursive;
 }

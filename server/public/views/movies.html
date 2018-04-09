@@ -1,6 +1,6 @@
 <div layout="row" layout-xs="column">
     <section>
-        <h1>Movie Database</h1>
+        <h1>MOVIE DATABASE</h1>
 
             <div id="movieNav">
                 <md-button href ="#!/genre">Genre</md-button> <md-button>Favorites</md-button>
@@ -16,7 +16,7 @@
             </select>
          <!-- dropdown to select movie genre -->
        
-           <div inputs>
+        <div class="inputs">
            <input ng-model="vm.movie.name" type="text" placeholder="Movie Title">
            <select>
                <option value="Comedy">Comedy</option>
@@ -27,13 +27,12 @@
                <option value="Family">Family</option>
                <option value="Television">Television</option>
                <option value="Other">Other</option>
-
-            </select> 
+          </select> 
          
            <input ng-model ="vm.movie.release_date" type="number" placeholder="Released">
            <input ng-model = "vm.movie.run_time" type="number" placeholder= Runtime (mins)>
            <md-button class="md-raised md-primary"ng-click="vm.addMovie(vm.movie)">Add Movie</md-button>
-           </div>
+        </div>
 
            
            <!-- // -->
@@ -43,11 +42,13 @@
                   <md-card-title>
                     <md-card-title-text>
                       <h1>{{movie.name}}</h1>
-                      <h4>Genre: {{movie.genre}}</h4>
+                      <p>{{movie.genre}}</p>
+                      <p>{{movie.release_date}}</p>
                       <h6>Runtime {{movie.run_time}} mins</h6>
                     </md-card-title-text>
                     <md-card-title-media>
-                      <div class="md-media-sm card-media"></div>
+                      <div class="md-media-sm card-media">
+                      </div>
                     </md-card-title-media>
                   </md-card-title>
                   <md-card-actions layout="row" layout-align="end center">
